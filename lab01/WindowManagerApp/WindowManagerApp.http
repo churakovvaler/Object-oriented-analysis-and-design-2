@@ -1,0 +1,6 @@
+@WindowManagerApp_HostAddress = http://localhost:5129
+
+GET {{WindowManagerApp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

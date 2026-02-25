@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "7nmZKsTrxrw5o/z0xF5z/PbXbcHeE1Y5Whn0EOjuYQc=",
+  "Source": "WindowManagerApp",
+  "BasePath": "_content/WindowManagerApp",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "WindowManagerApp\\wwwroot",
+      "Source": "WindowManagerApp",
+      "ContentRoot": "C:\\Users\\chura\\OneDrive\\Рабочий стол\\Object-oriented-analysis-and-design-2\\lab01\\WindowManagerApp\\wwwroot\\",
+      "BasePath": "_content/WindowManagerApp",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\chura\\OneDrive\\Рабочий стол\\Object-oriented-analysis-and-design-2\\lab01\\WindowManagerApp\\wwwroot\\index.html",
+      "SourceId": "WindowManagerApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\chura\\OneDrive\\Рабочий стол\\Object-oriented-analysis-and-design-2\\lab01\\WindowManagerApp\\wwwroot\\",
+      "BasePath": "_content/WindowManagerApp",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ]
+}
