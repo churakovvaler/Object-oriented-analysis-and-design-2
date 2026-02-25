@@ -28,5 +28,4 @@
 3. Если окно было закрыто, при следующем запросе создаётся **новый экземпляр**.
 
 ## Диаграмма классов 
-
-![alt text](<Диаграмма без названия.drawio.png>)
+<img width="171" height="241" alt="Диаграмма без названия drawio" src="https://github.com/user-attachments/assets/eb0ea962-a4f6-4a62-ae59-f4d6f8a5711e" />
