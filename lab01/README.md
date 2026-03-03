@@ -29,6 +29,7 @@
 
 ##Реализация идеи без Singleton.
 
+```csharp
 namespace WindowManagerApp.Models
 {
     public class Window
@@ -90,11 +91,11 @@ namespace WindowManagerApp.Controllers
         }
     }
 }
-
+```
 
 ##Реализация идеи с Singleton.
 <img width="352" height="432" alt="Диаграмма без названия drawio (1)" src="https://github.com/user-attachments/assets/7ed5433a-d862-4e73-9ffc-6a852484a588" />
-
+```csharp
 namespace WindowManagerSingleton.Models
 {
     public class Window
@@ -163,3 +164,4 @@ namespace WindowManagerSingleton.Services
         }
     }
 }
+```
