@@ -27,5 +27,139 @@
 2. При повторном запросе на открытие окна возвращается **ссылка на уже созданный объект**;
 3. Если окно было закрыто, при следующем запросе создаётся **новый экземпляр**.
 
-## Диаграмма классов 
-<img width="171" height="241" alt="Диаграмма без названия drawio" src="https://github.com/user-attachments/assets/eb0ea962-a4f6-4a62-ae59-f4d6f8a5711e" />
+##Реализация идеи без Singleton.
+
+namespace WindowManagerApp.Models
+{
+    public class Window
+    {
+        public Guid Id { get; set; }
+        public string Title { get; set; } = string.Empty;
+        public DateTime CreatedAt { get; set; }
+    }
+}
+
+using Microsoft.AspNetCore.Mvc;
+using WindowManagerApp.Models;
+
+namespace WindowManagerApp.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class WindowController : ControllerBase
+    {
+        private static List<Window> _windows = new();
+
+
+        [HttpPost("open")]
+    public ActionResult<Window> OpenWindow()
+    {
+        var existingWindow = _windows.FirstOrDefault(w => w.Title == "Настройки");
+
+        if (existingWindow != null)
+        {
+            return Ok(existingWindow);
+        }
+
+        var window = new Window
+        {
+            Id = Guid.NewGuid(),
+            Title = "Настройки",
+            CreatedAt = DateTime.Now
+        };
+
+        _windows.Add(window);
+        return Ok(window);
+    }
+
+        [HttpGet]
+        public ActionResult<List<Window>> GetWindows()
+        {
+            return Ok(_windows);
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult CloseWindow(Guid id)
+        {
+            var window = _windows.FirstOrDefault(w => w.Id == id);
+            if (window == null)
+                return NotFound();
+
+            _windows.Remove(window);
+            return NoContent();
+        }
+    }
+}
+
+
+##Реализация идеи с Singleton.
+<img width="352" height="432" alt="Диаграмма без названия drawio (1)" src="https://github.com/user-attachments/assets/7ed5433a-d862-4e73-9ffc-6a852484a588" />
+
+namespace WindowManagerSingleton.Models
+{
+    public class Window
+    {
+        public Guid Id { get; set; }
+        public string Title { get; set; } = string.Empty;
+        public DateTime CreatedAt { get; set; }
+    }
+}
+
+using WindowManagerSingleton.Models;
+
+namespace WindowManagerSingleton.Services
+{
+    public class WindowManager
+    {
+        private static WindowManager? _instance;
+
+        private List<Window> _windows;
+
+        private WindowManager()
+        {
+            _windows = new List<Window>();
+        }
+
+        public static WindowManager GetInstanceSingleton()
+        {
+            if (_instance == null)
+            {
+                _instance = new WindowManager();
+            }
+
+            return _instance;
+        }
+        public Window OpenWindow()
+        {
+            var existing = _windows.FirstOrDefault(w => w.Title == "Настройки");
+
+            if (existing != null)
+                return existing;
+
+            var window = new Window
+            {
+                Id = Guid.NewGuid(),
+                Title = "Настройки",
+                CreatedAt = DateTime.Now
+            };
+
+            _windows.Add(window);
+            return window;
+        }
+
+        public List<Window> GetWindows()
+        {
+            return _windows;
+        }
+
+        public bool CloseWindow(Guid id)
+        {
+            var window = _windows.FirstOrDefault(w => w.Id == id);
+            if (window == null)
+                return false;
+
+            _windows.Remove(window);
+            return true;
+        }
+    }
+}
