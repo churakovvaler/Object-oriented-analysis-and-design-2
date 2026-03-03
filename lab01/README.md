@@ -29,8 +29,6 @@
 
 ## Реализация идеи без Singleton.
 
-<img width="171" height="241" alt="Диаграмма без названия drawio" src="https://github.com/user-attachments/assets/fa3d0e08-5e97-4cb4-8090-6e72abc44d51" />
-
 ```csharp
 namespace WindowManagerApp.Models
 {
