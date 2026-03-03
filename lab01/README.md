@@ -28,6 +28,7 @@
 3. Если окно было закрыто, при следующем запросе создаётся **новый экземпляр**.
 
 ## Реализация идеи без Singleton.
+<img width="171" height="241" alt="Диаграмма без названия drawio" src="https://github.com/user-attachments/assets/fa3d0e08-5e97-4cb4-8090-6e72abc44d51" />
 
 ```csharp
 namespace WindowManagerApp.Models
@@ -93,7 +94,7 @@ namespace WindowManagerApp.Controllers
 }
 ```
 
-##Реализация идеи с Singleton.
+## Реализация идеи с Singleton.
 <img width="352" height="432" alt="Диаграмма без названия drawio (1)" src="https://github.com/user-attachments/assets/7ed5433a-d862-4e73-9ffc-6a852484a588" />
 ```csharp
 namespace WindowManagerSingleton.Models
