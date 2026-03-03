@@ -13,7 +13,6 @@ namespace WindowManagerApp.Controllers
         [HttpPost("open")]
     public ActionResult<Window> OpenWindow()
     {
-        // Проверяем, существует ли уже окно "Настройки"
         var existingWindow = _windows.FirstOrDefault(w => w.Title == "Настройки");
 
         if (existingWindow != null)

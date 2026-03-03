@@ -1,0 +1,6 @@
+@WindowManagerSingleton_HostAddress = http://localhost:5134
+
+GET {{WindowManagerSingleton_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

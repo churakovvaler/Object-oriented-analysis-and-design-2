@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "SMm3SiWZSkomooSQ31Uc+rm5s4jTYXaOldJfeSYmip4=",
+  "Source": "WindowManagerSingleton",
+  "BasePath": "_content/WindowManagerSingleton",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "WindowManagerSingleton\\wwwroot",
+      "Source": "WindowManagerSingleton",
+      "ContentRoot": "C:\\Users\\chura\\OneDrive\\Рабочий стол\\Object-oriented-analysis-and-design-2\\lab01\\WindowManagerSingleton\\wwwroot\\",
+      "BasePath": "_content/WindowManagerSingleton",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\chura\\OneDrive\\Рабочий стол\\Object-oriented-analysis-and-design-2\\lab01\\WindowManagerSingleton\\wwwroot\\index.html",
+      "SourceId": "WindowManagerSingleton",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\chura\\OneDrive\\Рабочий стол\\Object-oriented-analysis-and-design-2\\lab01\\WindowManagerSingleton\\wwwroot\\",
+      "BasePath": "_content/WindowManagerSingleton",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ]
+}

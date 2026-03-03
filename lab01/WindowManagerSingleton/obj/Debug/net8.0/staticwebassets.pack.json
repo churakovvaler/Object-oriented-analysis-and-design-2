@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\chura\\OneDrive\\Рабочий стол\\Object-oriented-analysis-and-design-2\\lab01\\WindowManagerSingleton\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WindowManagerSingleton.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.WindowManagerSingleton.props",
+      "PackagePath": "build\\WindowManagerSingleton.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.WindowManagerSingleton.props",
+      "PackagePath": "buildMultiTargeting\\WindowManagerSingleton.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.WindowManagerSingleton.props",
+      "PackagePath": "buildTransitive\\WindowManagerSingleton.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
