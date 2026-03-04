@@ -95,7 +95,7 @@ namespace WindowManagerApp.Controllers
 
 ## Реализация идеи с Singleton.
 
-<img width="352" height="432" alt="Диаграмма без названия drawio (1)" src="https://github.com/user-attachments/assets/7ed5433a-d862-4e73-9ffc-6a852484a588" />
+<img width="351" height="431" alt="Диаграмма без названия drawio (2)" src="https://github.com/user-attachments/assets/922e4071-7338-4798-bb47-9b23d6d40d94" />
 
 ```csharp
 namespace WindowManagerSingleton.Models
