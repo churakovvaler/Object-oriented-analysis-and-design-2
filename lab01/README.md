@@ -108,6 +108,15 @@ namespace WindowManagerSingleton.Models
     }
 }
 
+public class WindowController : ControllerBase
+    {
+        private readonly WindowManager _manager;
+
+        public WindowController()
+        {
+            _manager = WindowManager.GetInstanceSingleton();
+        }
+}
 using WindowManagerSingleton.Models;
 
 namespace WindowManagerSingleton.Services
