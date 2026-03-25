@@ -1,0 +1,3 @@
+C:/Users/chura/OneDrive/Рабочий стол/CompositeCompanyStructure/cmake-build-debug/CMakeFiles/CompositeCompanyStructure.dir
+C:/Users/chura/OneDrive/Рабочий стол/CompositeCompanyStructure/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/chura/OneDrive/Рабочий стол/CompositeCompanyStructure/cmake-build-debug/CMakeFiles/rebuild_cache.dir

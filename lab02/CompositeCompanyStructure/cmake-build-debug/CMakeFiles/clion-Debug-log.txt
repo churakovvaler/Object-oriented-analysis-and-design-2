@@ -1,0 +1,7 @@
+"C:\Program Files\JetBrains\CLion 2024.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2024.3/bin/ninja/win/x64/ninja.exe" -G Ninja -S "C:\Users\chura\OneDrive\Рабочий стол\CompositeCompanyStructure" -B "C:\Users\chura\OneDrive\Рабочий стол\CompositeCompanyStructure\cmake-build-debug"
+CMake Error at CMakeLists.txt:15 (target_link_libraries):
+  Cannot specify link libraries for target "CompanyStructure" which is not
+  built by this project.
+
+
+-- Configuring incomplete, errors occurred!

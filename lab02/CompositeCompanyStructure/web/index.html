@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Company Explorer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h1>Company Explorer</h1>
+
+
+<h2>Add Department</h2>
+
+<div class="form-row">
+
+    <input id="depName" placeholder="Department name">
+
+    <button id="addDepBtn">Add</button>
+
+</div>
+
+
+
+<h2>Add Employee</h2>
+
+<form id="employeeForm">
+
+    <div class="form-row">
+
+        <input id="empName" placeholder="Full name" required>
+
+        <input id="empPosition" placeholder="Position" required>
+
+        <input id="empBirth" type="date" required>
+
+        <input id="empExp" type="number" min="0" placeholder="Experience (years)" required>
+
+        <select id="departmentSelect">
+            <option value="">No department</option>
+        </select>
+
+        <button type="submit">Add</button>
+
+    </div>
+
+    <textarea id="empInfo" placeholder="Additional information"></textarea>
+
+</form>
+
+
+
+<h2>Company Structure</h2>
+
+<div id="tree"></div>
+
+
+
+<h2>Employees without department</h2>
+
+<div id="freeEmployees"></div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
