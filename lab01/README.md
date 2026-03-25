@@ -29,8 +29,6 @@
 
 ## Реализация идеи без Singleton.
 
-<img width="171" height="241" alt="Диаграмма без названия drawio" src="https://github.com/user-attachments/assets/fa3d0e08-5e97-4cb4-8090-6e72abc44d51" />
-
 ```csharp
 namespace WindowManagerApp.Models
 {
@@ -97,7 +95,8 @@ namespace WindowManagerApp.Controllers
 
 ## Реализация идеи с Singleton.
 
-<img width="352" height="432" alt="Диаграмма без названия drawio (1)" src="https://github.com/user-attachments/assets/7ed5433a-d862-4e73-9ffc-6a852484a588" />
+<img width="537" height="401" alt="Диаграмма без названия drawio (5)" src="https://github.com/user-attachments/assets/e24e1093-39d2-407c-b1ed-dab4b20c874a" />
+
 
 ```csharp
 namespace WindowManagerSingleton.Models
@@ -110,6 +109,15 @@ namespace WindowManagerSingleton.Models
     }
 }
 
+public class WindowController : ControllerBase
+    {
+        private readonly WindowManager _manager;
+
+        public WindowController()
+        {
+            _manager = WindowManager.GetInstanceSingleton();
+        }
+}
 using WindowManagerSingleton.Models;
 
 namespace WindowManagerSingleton.Services
@@ -169,3 +177,7 @@ namespace WindowManagerSingleton.Services
     }
 }
 ```
+
+## Вывод
+
+Была реализована система управления окнами без использования паттерна и с применением паттерна Singleton(Одинокий одиночка). В данном проекте использование паттерна Singleton можно считать избыточным. Так как задача управления окнами проста и могла быть реализована с помощью обычного класса с проверкой.
