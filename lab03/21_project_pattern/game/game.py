@@ -1,6 +1,7 @@
 import pygame
 from config import WIDTH
 from game.logic import create_deck, calculate_score
+from game.round_template import RoundTemplate
 from game.blackjack_round import BlackjackRound
 from ui.render import draw_text, draw_center_text, draw_hand, draw_slots
 from ui.panel import draw_panel
@@ -10,6 +11,7 @@ class Game:
     def __init__(self, screen):
         self.screen = screen
         self.reset()
+        self.round: RoundTemplate
 
     def reset(self):
         self.deck = create_deck()
@@ -84,7 +86,7 @@ class Game:
                 b.draw(self.screen)
 
         elif self.state == "game_over":
-            draw_center_text(self.screen,"СТЕК 0 💀")
+            draw_center_text(self.screen,"СТЕК 0! ИДИ В ЛОМБАРД!")
             self.restart.draw(self.screen)
 
         else:
