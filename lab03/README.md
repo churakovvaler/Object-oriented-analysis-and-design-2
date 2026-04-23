@@ -62,7 +62,6 @@ elif state == "end":
 
 Создать базовый класс, который задаёт **общий алгоритм игрового раунда**, а конкретные шаги реализовать в подклассах.
 
-
 ## Общий алгоритм раунда
 
 ```python
@@ -74,7 +73,6 @@ play_round():
 ```
 
 Этот алгоритм не изменяется.
-
 
 # Реализация без Template Method
 
@@ -94,11 +92,12 @@ class Game:
 
 # Реализация с Template Method
 
+<img width="661" height="384" alt="Диаграмма без названия drawio (6)" src="https://github.com/user-attachments/assets/67aad575-7b67-4b14-932c-fbc2f5737765" />
 
 ## Базовый класс — RoundTemplate
 
 ```python
-class RoundTemplate:
+class RoundTemplate(ABC):
 
     def play_round(self):
         self.deal_cards()
@@ -106,19 +105,22 @@ class RoundTemplate:
         self.dealer_turn()
         self.resolve_round()
 
+    @abstractmethod
     def deal_cards(self):
-        raise NotImplementedError
+        pass
 
+    @abstractmethod
     def player_turn(self):
-        raise NotImplementedError
+        pass
 
+    @abstractmethod
     def dealer_turn(self):
-        raise NotImplementedError
+        pass
 
+    @abstractmethod
     def resolve_round(self):
-        raise NotImplementedError
+        pass
 ```
-
 
 ##  Конкретная реализация — BlackjackRound
 
