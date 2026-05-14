@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <title>Сервис "Дай на лапу"</title>
+
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Сервис "Дай на лапу"</h1>
+
+    <form action="/payment" method="post">
+
+        <label>Фамилия</label>
+
+        <input type="text"
+               name="surname"
+               minlength="2"
+               pattern="[А-Яа-яA-Za-z]+"
+               required>
+
+        <label>Имя</label>
+
+        <input type="text"
+               name="name"
+               minlength="2"
+               pattern="[А-Яа-яA-Za-z]+"
+               required>
+
+        <label>Отчество</label>
+
+        <input type="text"
+               name="patronymic"
+               minlength="2"
+               pattern="[А-Яа-яA-Za-z]+"
+               required>
+
+        <label>Группа</label>
+
+        <input type="text"
+               name="group"
+               minlength="6"
+               required>
+
+        <label>Предмет</label>
+
+        <select id="subjectSelect"
+                name="subject"
+                required>
+
+            <option value="">
+                Выберите предмет
+            </option>
+
+        </select>
+
+        <label>Преподаватель</label>
+
+        <select id="teacherSelect"
+                name="teacher"
+                required>
+
+            <option value="">
+                Выберите преподавателя
+            </option>
+
+        </select>
+
+        <label>Оценка</label>
+
+        <select id="gradeSelect"
+                name="grade"
+                required>
+
+            <option value="">
+                Выберите оценку
+            </option>
+
+            <option value="3">
+                3 — 500$
+            </option>
+
+            <option value="4">
+                4 — 750$
+            </option>
+
+            <option value="5">
+                5 — 1000$
+            </option>
+
+        </select>
+
+        <button type="submit">
+            Перейти к оплате
+        </button>
+
+    </form>
+
+</div>
+
+<script th:inline="javascript">
+
+    const items = [[${items}]];
+
+    const subjectSelect =
+        document.getElementById("subjectSelect");
+
+    const teacherSelect =
+        document.getElementById("teacherSelect");
+
+    const uniqueSubjects =
+        [...new Set(
+            items.map(item => item.subject)
+        )];
+
+    uniqueSubjects.forEach(subject => {
+
+        const option =
+            document.createElement("option");
+
+        option.value = subject;
+        option.text = subject;
+
+        subjectSelect.appendChild(option);
+    });
+
+    subjectSelect.addEventListener(
+        "change",
+        function () {
+
+            teacherSelect.innerHTML =
+                '<option value="">Выберите преподавателя</option>';
+
+            const selectedSubject =
+                this.value;
+
+            const filteredTeachers =
+                items.filter(
+                    item =>
+                        item.subject === selectedSubject
+                );
+
+            filteredTeachers.forEach(item => {
+
+                const option =
+                    document.createElement("option");
+
+                option.value = item.teacher;
+                option.text = item.teacher;
+
+                teacherSelect.appendChild(option);
+            });
+        }
+    );
+
+</script>
+
+</body>
+
+</html>

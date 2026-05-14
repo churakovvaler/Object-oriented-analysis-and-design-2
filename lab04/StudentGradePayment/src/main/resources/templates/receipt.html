@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <title>Receipt</title>
+
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Payment Receipt</h1>
+
+    <p>
+        <strong>Surname:</strong>
+        <span th:text="${order.surname}"></span>
+    </p>
+
+    <p>
+        <strong>Name:</strong>
+        <span th:text="${order.name}"></span>
+    </p>
+
+    <p>
+        <strong>Patronymic:</strong>
+        <span th:text="${order.patronymic}"></span>
+    </p>
+
+    <p>
+        <strong>Group:</strong>
+        <span th:text="${order.group}"></span>
+    </p>
+
+    <hr>
+
+    <p>
+        <strong>Subject:</strong>
+        <span th:text="${order.subject}"></span>
+    </p>
+
+    <p>
+        <strong>Teacher:</strong>
+        <span th:text="${order.teacher}"></span>
+    </p>
+
+    <p>
+        <strong>Grade:</strong>
+        <span th:text="${order.grade}"></span>
+    </p>
+
+    <p>
+        <strong>Price:</strong>
+        <span th:text="'$' + ${order.price}"></span>
+    </p>
+
+    <p>
+        <strong>Status:</strong>
+        <span th:text="${order.status}"></span>
+    </p>
+
+    <a href="/">
+        Back to main page
+    </a>
+
+</div>
+
+</body>
+
+</html>
