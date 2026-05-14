@@ -82,6 +82,7 @@ public class PaymentService {
 
 # Реализация с Service Stub
 
+<img width="592" height="586" alt="Диаграмма без названия drawio (7)" src="https://github.com/user-attachments/assets/3edd4602-d2a5-446c-b476-e1bcc49a61b1" />
 
 
 ## Интерфейс — PaymentService
